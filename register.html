@@ -45,7 +45,7 @@
       box-sizing: border-box;
     }
 
-    input[type="submit"] {
+    input[type="submit"]{
       background-color: #0984e3;
       color: white;
       padding: 10px 15px;
@@ -59,6 +59,19 @@
     input[type="submit"]:hover {
       background-color: #74b9ff;
     }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #0984a1;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+}
+    .btn:hover{
+      color:black;
+    }
+
   </style>
 </head>
 
@@ -75,7 +88,10 @@
       <label for="confirm_password">Re-enter your password:</label>
       <input type="password" name="cpwd" id="confirm_password" required />
 
-      <input type="submit" name="submit" value="Register" />
+      <input type="submit" name="submit" value="Register" /><hr>
+
+      <label>Already have an account</label>
+      <a href="login.html" class="btn">Login</a>
     </form>
   </div>
 </body>
