@@ -1,98 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Story Writing</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #74b9ff, #a29bfe);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-    }
-
-    .story-container {
-      background-color: #fff;
-      padding: 40px 50px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      width: 100%;
-      max-width: 600px;
-      text-align: center;
-    }
-
-    h1 {
-      color: #333;
-      margin-bottom: 30px;
-    }
-
-    label {
-      display: block;
-      text-align: left;
-      margin-bottom: 8px;
-      color: #555;
-      font-weight: bold;
-      font-size: 15px;
-    }
-
-    input[type="text"],
-    textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-sizing: border-box;
-      font-size: 15px;
-    }
-
-    textarea {
-      min-height: 180px;
-      resize: vertical;
-    }
-
-    input[type="submit"] {
-      background-color: #0984e3;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      width: 100%;
-      font-size: 17px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #74b9ff;
-    }
-	
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>  
+<body>
   <div class="story-container">
     <h1>Write Your Story</h1>
 
     <form action="story.php" method="post" enctype="multipart/form-data">
-      <label for="author">Author's Name:</label>
-      <input type="text" name="author" id="author" required />
+      <label>Author's Name:</label>
+      <input type="text" name="author" required>
 
-      <label for="title">Story Title:</label>
-      <input type="text" name="title" id="title" required />
+      <label>Story Title:</label>
+      <input type="text" name="title" required>
 
-      <label for="para">Your Story:</label>
-      <textarea name="para" id="para" maxlength="2000" placeholder="Write your story here..."></textarea>
+      <label>Your Story:</label>
+      <textarea name="para" maxlength="2000" placeholder="Write your story here..."></textarea>
 
-      <input type="submit" name="submit" value="Publish Story" />
+      <input type="submit" name="submit" value="Publish Story">
     </form>
-
   </div>
 </body>
 </html>

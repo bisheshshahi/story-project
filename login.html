@@ -2,96 +2,23 @@
 <html>
 <head>
   <title>Login Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #74b9ff, #a29bfe);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .login-container {
-      background-color: #fff;
-      padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);xa
-      width: 350px;
-      text-align: center;
-    }
-
-    h1 {
-      color: #333;
-      margin-bottom: 25px;
-    }
-
-    label {
-      display: block;
-      text-align: left;
-      margin-bottom: 5px;
-      color: #555;
-      font-weight: bold;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    input[type="submit"] {
-      background-color: #0984e3;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-      font-size: 16px;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #74b9ff;
-    }
-
-    a {
-      display: inline-block;
-      margin-top: 10px;
-      text-decoration: none;
-      background-color: #74b9ff;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 5px;
-      font-size: 14px;
-      width: 90%;
-      border: none;
-    }
-
-    a:hover {
-      background-color: #0984e3;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="login-container">
     <h1>Login your account</h1>
+
     <form action="login.php" method="post">
-      <label for="username">Enter your username:</label>
-      <input type="text" name="uname" required />
+      <label>Enter your username:</label>
+      <input type="text" name="uname" required>
 
-      <label for="password">Enter your password:</label>
-      <input type="password" name="pwd" required />
+      <label>Enter your password:</label>
+      <input type="password" name="pwd" required>
 
-      <input type="submit" name="submit" value="Log In" />
+      <input type="submit" name="submit" value="Log In">
     </form>
-    
+
     <a href="register.html">Register your account</a>
   </div>
 </body>

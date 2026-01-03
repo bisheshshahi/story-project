@@ -2,95 +2,27 @@
 <html>
 <head>
   <title>Registration Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #74b9ff, #a29bfe);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .register-container {
-      background-color: #fff;
-      padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      width: 350px;
-      text-align: center;
-    }
-
-    h1 {
-      color: #333;
-      margin-bottom: 25px;
-    }
-
-    label {
-      display: block;
-      text-align: left;
-      margin-bottom: 5px;
-      color: #555;
-      font-weight: bold;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    input[type="submit"]{
-      background-color: #0984e3;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-      font-size: 16px;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #74b9ff;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 8px 16px;
-      background-color: #0984a1;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-}
-    .btn:hover{
-      color:black;
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="register-container">
     <h1>Register Your Account</h1>
+
     <form action="register.php" method="post">
-      <label for="username">Enter your username:</label>
-      <input type="text" name="uname" id="username" required />
+      <label>Enter your username:</label>
+      <input type="text" name="uname" required>
 
-      <label for="password">Enter your password:</label>
-      <input type="password" name="pwd" id="password" required />
+      <label>Enter your password:</label>
+      <input type="password" name="pwd" required>
 
-      <label for="confirm_password">Re-enter your password:</label>
-      <input type="password" name="cpwd" id="confirm_password" required />
+      <label>Re-enter your password:</label>
+      <input type="password" name="cpwd" required>
 
-      <input type="submit" name="submit" value="Register" /><hr>
+      <input type="submit" name="submit" value="Register">
+      <hr>
 
-      <label>Already have an account</label>
+      <label>Already have an account?</label>
       <a href="login.html" class="btn">Login</a>
     </form>
   </div>

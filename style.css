@@ -1,0 +1,101 @@
+/* ===== GLOBAL PAGE STYLE ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* ===== CONTAINERS ===== */
+.login-container,
+.register-container,
+.story-container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* ===== FORM ELEMENTS ===== */
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  color: #555;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+/* ===== BUTTONS ===== */
+input[type="submit"] {
+  background-color: #0984e3;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #74b9ff;
+}
+
+/* ===== LINKS AS BUTTONS ===== */
+a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  background-color: #74b9ff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 90%;
+}
+
+a:hover {
+  background-color: #0984e3;
+}
+
+/* Special small button style (register page) */
+.btn {
+  padding: 8px 16px;
+  background-color: #0984a1;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  color: black;
+}
