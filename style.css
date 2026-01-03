@@ -8,21 +8,40 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
 }
 
 /* ===== CONTAINERS ===== */
-.login-container,
-.register-container,
-.story-container {
+.login-container {
   background-color: #fff;
   padding: 30px 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 350px;
+  text-align: center;
+}
+
+.register-container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 350px;
+  text-align: center;
+}
+
+.story-container {
+  background-color: #fff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   width: 100%;
   max-width: 600px;
   text-align: center;
 }
 
+/* ===== HEADINGS ===== */
 h1 {
   color: #333;
   margin-bottom: 25px;
@@ -42,9 +61,9 @@ input[type="password"],
 textarea {
   width: 100%;
   padding: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 5px;
   box-sizing: border-box;
   font-size: 15px;
 }
@@ -58,9 +77,9 @@ textarea {
 input[type="submit"] {
   background-color: #0984e3;
   color: white;
-  padding: 12px;
+  padding: 10px 15px;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   cursor: pointer;
   width: 100%;
   font-size: 16px;
@@ -79,10 +98,11 @@ a {
   text-decoration: none;
   background-color: #74b9ff;
   color: white;
-  padding: 10px 15px;
-  border-radius: 6px;
+  padding: 8px 15px;
+  border-radius: 5px;
   font-size: 14px;
   width: 90%;
+  text-align: center;
 }
 
 a:hover {
@@ -98,4 +118,76 @@ a:hover {
 
 .btn:hover {
   color: black;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablets and small desktops (max-width: 992px) */
+@media (max-width: 992px) {
+  .login-container,
+  .register-container {
+    width: 300px;
+    padding: 25px;
+  }
+
+  .story-container {
+    max-width: 500px;
+    padding: 30px 40px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea,
+  input[type="submit"],
+  a,
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Small tablets & mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .login-container,
+  .register-container,
+  .story-container {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* Extra small devices (max-width: 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea,
+  input[type="submit"],
+  a,
+  .btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .login-container,
+  .register-container,
+  .story-container {
+    padding: 15px;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
 }
