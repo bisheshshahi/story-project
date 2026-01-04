@@ -14,6 +14,8 @@
 			$user = "insert into author(username, password) values('$uname', '$pwd')";
 			mysqli_query($con, $user);
 			echo "Registration successfull";
+      echo "<br>";
+      echo '<a href="login.html">Login</a>';
 		}
 		else
 			echo "Passwords do not match";
