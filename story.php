@@ -62,13 +62,13 @@
     } else {
       $insert = "INSERT INTO stories (username, title, content) VALUES ('$uname', '$title', '$content')";
       mysqli_query($con, $insert) or die("Error saving story");
-      echo "Your story has been saved successfully!";
+      echo "Story published!";
     }
   }
 ?>
 
 <br>
-<a href="my_stories.php">View the stories</a>
+<a href="my_stories.php">View your stories</a>
 
 </div>
 
