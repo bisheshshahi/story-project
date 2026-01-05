@@ -17,6 +17,7 @@ $result = mysqli_query($con, $checkstory);
 <head>
   <title>My Stories</title>
   <style>
+    /* Body styling and center page */
     body {
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #74b9ff, #a29bfe);
@@ -28,54 +29,28 @@ $result = mysqli_query($con, $checkstory);
       min-height: 100vh;
     }
 
+    /* Container box */
     .container {
       background-color: #fff;
-      width: 80%;
+      width: 90%;
       max-width: 800px;
-      margin-top: 50px;
+      margin: 50px auto;
       padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      box-sizing: border-box;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
-    h2 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 30px;
-    }
-
-    .story {
-      border: 1px solid #ccc;
-      padding: 15px 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      background-color: #fafafa;
-    }
-
-    .story h3 {
-      margin: 0 0 10px 0;
-      color: #2d3436;
-    }
-
-    .story p {
-      color: #555;
-      line-height: 1.5;
-    }
-
-    .no-story {
-      text-align: center;
-      font-size: 18px;
-      color: #555;
-      background-color: #f8f8f8;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
+    /* Topbar with username and buttons */
     .topbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 20px;
+      flex-wrap: wrap; /* wrap buttons on small screens */
+      gap: 10px;
     }
 
     .left {
@@ -86,6 +61,7 @@ $result = mysqli_query($con, $checkstory);
     .right {
       display: flex;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     a.button {
@@ -94,14 +70,71 @@ $result = mysqli_query($con, $checkstory);
       background-color: #0984e3;
       color: white;
       padding: 10px 20px;
-      border-radius: 5px;
-      transition: 0.3s;
+      border-radius: 8px;
       font-weight: bold;
+      transition: 0.3s;
+      max-width: 100%;
+      overflow-wrap: break-word;
+      text-align: center;
     }
 
     a.button:hover {
       background-color: #74b9ff;
     }
+
+    /* Page heading */
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    /* Each story box */
+    .story {
+      border: 1px solid #ccc;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      background-color: #fafafa;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .story h3 {
+      margin: 0 0 10px 0;
+      color: #2d3436;
+      word-break: break-word;
+    }
+
+    .story p {
+      color: #555;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+
+    /* Message when no story exists */
+    .no-story {
+      text-align: center;
+      font-size: 18px;
+      color: #555;
+      background-color: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 500px){
+      .container {
+        padding: 20px;
+      }
+
+      a.button {
+        padding: 8px 14px;
+      }
+    }
+
   </style>
 </head>
 
