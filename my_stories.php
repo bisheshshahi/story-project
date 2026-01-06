@@ -156,7 +156,7 @@ $result = mysqli_query($con, $checkstory);
         echo "<div class='story'>";
         echo "<h3>" . htmlspecialchars($row['title']) . "</h3>";
         echo "<p>" . nl2br(htmlspecialchars($row['content'])) . "</p>";
-        echo 'Author: <span style="color:blue;">' . $row['username'] . '</span>';
+        echo 'Author: <span style="color:blue; ">' . htmlspecialchars($row['username']) . '</span>';
         echo "</div>";
       }
     } else {
