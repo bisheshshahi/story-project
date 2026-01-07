@@ -59,16 +59,20 @@
 
     if(empty($title) || empty($content)){
       echo "Please fill in both Title and Story content!";
-    } else {
+      echo "<br>";
+      echo '<a href="story.html">Go back</a>';
+    } 
+    else {
       $insert = "INSERT INTO stories (username, title, content) VALUES ('$uname', '$title', '$content')";
       mysqli_query($con, $insert) or die("Error saving story");
       echo "Story published!";
+      echo "<br>";
+      echo '<a href="my_stories.php">View your stories</a>';
     }
   }
 ?>
 
-<br>
-<a href="my_stories.php">View your stories</a>
+
 
 </div>
 
